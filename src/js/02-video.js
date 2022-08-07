@@ -1,6 +1,6 @@
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
-const LOCALSTOFAGE_KEY = '"videoplayer-current-time"';
+const LOCALSTOFAGE_KEY = "videoplayer-current-time";
 const throttle = require('lodash.throttle');
 
 const pauseTime = function() {
@@ -11,6 +11,7 @@ const pauseTime = function() {
 
     });
 };
+
 
 player.on('timeupdate', throttle(pauseTime, 1000));
 
