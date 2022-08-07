@@ -1,4 +1,3 @@
-
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
 const LOCALSTOFAGE_KEY = '"videoplayer-current-time"';
@@ -13,7 +12,7 @@ const pauseTime = function() {
     });
 };
 
-player.on('timeupdate', _.throttle(pauseTime, 1000))
+player.on('timeupdate', throttle(pauseTime, 1000));
 
 const startTime = localStorage.getItem(LOCALSTOFAGE_KEY)
 
