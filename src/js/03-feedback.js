@@ -29,18 +29,15 @@ function takeTextInput() {
 
     const savedText = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
 
-    formFields.email.value = savedText.email;
-    formFields.message.textContent = savedText.message;
-
     console.log(savedText.email);
     console.log(savedText.message);
     console.log(formFields.email.value);
     console.log(formFields.message.textContent);
     console.log(formFields);
     
-    
-    // if (savedText) {
-
-    // }   
+    if (savedText) {
+    formFields.email.value = savedText.email;
+    formFields.message.textContent = savedText.message;
+    }   
 
 }   
