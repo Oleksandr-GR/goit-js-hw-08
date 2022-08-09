@@ -16,7 +16,6 @@ const pauseTime = function() {
                 break;
 
             default:
-                // some other error occurred
                 break;
         }
     });
